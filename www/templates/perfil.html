@@ -1,0 +1,37 @@
+<ion-view view-title="Perfil Jugadores">
+    <ion-content>
+        <ion-item>
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <div class="imagenPerfil">
+                         <h1 class="textPerfil" style="color: green;">{{usuario.login}}</h1><br>
+                        <img class="imgPerfil col-90" src="http://localhost:3000{{usuario.urlfoto}}">
+                    </div><br>
+                    <div class="textPerfil">
+                        <ion-list>
+                            <ion-item id="datos1" class="item-divider item-icon-right"><b>Datos Personales</b> <i class="icon ion-person"></i></ion-item>
+                            <ion-item id="datos5">
+                                <p style="color:black"><strong>Nombre: </strong>{{usuario.nombre}}</p>
+                                <p style="color:black"><strong>Apellidos: </strong>{{usuario.apellidos}}</p>
+                                <p style="color:black"><strong>Username: </strong>{{usuario.login}}</p>
+                                <p style="color:black"><strong>Puntuación: </strong>{{usuario.puntuacion | number}}%</p>
+                            </ion-item>
+                        </ion-list>
+                        <br>
+                        <ion-list>
+                            <ion-item id="datos2" class="item-divider item-icon-right"><b>Contacto</b> <i class="icon ion-chatboxes"></i></ion-item>
+                            <ion-item id="datos3" class="item-icon-right" ng-click="call()">
+                              {{usuario.telefono}}
+                              <i class="icon ion-android-call"></i>
+                            </ion-item>
+                            <ion-item id="datos4" class="item-icon-right" ng-click="mail()">
+                              {{usuario.email}}
+                              <i class="icon ion-ios-email"></i>
+                            </ion-item>
+                        </ion-list>
+                    </div><br><br>
+                </div>
+            </div>
+        </ion-item>
+    </ion-content>
+</ion-view>

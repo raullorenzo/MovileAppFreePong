@@ -1,0 +1,43 @@
+<ion-view view-title="Perfil de {{login}}">
+    <ion-content>
+        <ion-item>
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <div class="imagenPerfil">
+                        <h1 class="textPerfil"style="color: green;">{{login}}</h1><br>
+                        <img class="imgPerfil col-90" src="http://147.83.7.158:3000{{urlfoto}}">
+                    </div>
+                    <br>
+                    <div class="textPerfil">
+                        <ion-list>
+                            <ion-item id="datos6" class="item-divider item-icon-right"><b>Datos Personales</b> <i class="icon ion-person"></i></ion-item>
+                            <ion-item id="datos8">
+                                <p style="color:black"><strong>Nombre: </strong>{{nombre}}</p>
+                                <p style="color:black"><strong>Apellidos: </strong>{{apellidos}}</p>
+                                <p style="color:black"><strong>Username: </strong>{{login}}</p>
+                                <p style="color:black"><strong>Password: </strong>{{password}}</p>
+                                <p style="color:black"><strong>Saldo: </strong>{{saldo | currency:'€ '}}</p>
+                                <p style="color:black"><strong>Puntuación: </strong>{{puntuacion | number}}%</p>
+                            </ion-item>
+                        </ion-list>
+                        <br>
+                        <ion-list>
+                            <ion-item id="datos7" class="item-divider item-icon-right"><b>Contacto</b> <i class="icon ion-chatboxes"></i></ion-item>
+                            <ion-item id="datos9" class="item-icon-right" ng-click="call()">
+                              {{telefono}}
+                              <i class="icon ion-android-call"></i>
+                            </ion-item>
+                            <ion-item id="datos10" class="item-icon-right" ng-click="mail()">
+                              {{email}}
+                              <i class="icon ion-ios-email"></i>
+                            </ion-item>
+                        </ion-list>
+                    </div><br><br>
+                    <button class="button button button-calm icon ion-settings" style="width:100%; background-color:#FF8100" ng-click="editarPerfil()">
+                    &nbsp;&nbsp;&nbsp;Editar Perfil
+                    </button>
+                </div>
+            </div>
+        </ion-item>
+    </ion-content>
+</ion-view>
